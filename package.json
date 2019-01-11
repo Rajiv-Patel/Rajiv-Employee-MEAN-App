@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "1.15.0",
-    "chalk": "1.1.1",
+    "chalk": "^2.4.1",
     "express": "4.13.4",
     "mongoose": "4.4.4",
     "package.json": "^2.0.1"
