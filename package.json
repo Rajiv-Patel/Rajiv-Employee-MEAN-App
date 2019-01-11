@@ -13,6 +13,6 @@
     "chalk": "1.1.1",
     "express": "4.13.4",
     "mongoose": "4.4.4",
-    "package.json": "^2.0.1"
+    
   }
 }
