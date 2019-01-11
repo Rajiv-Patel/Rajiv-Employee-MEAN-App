@@ -1,18 +1,18 @@
 {
   "name": "mean-application",
   "version": "1.0.0",
-  "description": "edureka! Mean Application",
+  "description": "Rajiv! Mean Application",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "edureka",
+  "author": "Rajiv",
   "license": "MIT",
   "dependencies": {
     "body-parser": "1.15.0",
     "chalk": "1.1.1",
     "express": "4.13.4",
     "mongoose": "4.4.4",
-    
+    "package.json": "^2.0.1"
   }
 }
