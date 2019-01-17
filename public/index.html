@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-     <title>MEAN Application</title>     
-     <link href="/libs/css/bootstrap.min.css" rel="stylesheet"> 
+     <title>MEAN Application</title>   
+       
+     <!--<link href="/libs/css/bootstrap.min.css" rel="stylesheet"> same as below--> 
+     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
      <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link rel="shortcut icon" href="http://d30aa6afk7qd1v.cloudfront.net/imgver.5694333/img/favicon.ico" type="image/x-icon">
+     <link rel="icon" href="/employee.png" type="image/x-icon">
      <script>
   $(function() {
     var datepicker=$("#datepicker").datepicker(
-                    {changeMonth:true,changeYear:true,maxDate:"-1M -1D -1Y",dateFormat:"mm-dd-yy"}
+                    {changeMonth:true,changeYear:true,maxDate:"1M 1D 1Y",dateFormat:"mm-dd-yy"}
                                               );
     $("#datepicker").bind("keydown", function (event) {
        event.preventDefault();
@@ -22,20 +24,23 @@
 
 <body>
     <div class="container" ng-controller="AppCtrl">
-      <br/>
-      <h1 align="center">By Rajiv: MEAN Application - Employee Directory App</h1><br/><br/>
+        <div align="center"> 
+          <p><img src="employee.png" width="20%"></p> 
+          <h4 align="center">By Rajiv: MEAN (CRUD) Application - Employee Directory App</h4>
+          <h5 align="center">"AngularJS v1.4.9", "express": "4.13.4", "mongoose": "4.4.4", jquery-ui.js 1.11.4</h5>
+        </div>
+            <BR>
       <table class="table">          
         <thead>
           <tr>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Hire Date</td>
-            <td>Department</td>
-            <td>Gender</td>
-            <td>Duration</td>
+            <td><b>Name</b></td>
+            <td><b>Email</b></td>
+            <td><b>Hire Date</b></td>
+            <td><b>Department</b></td>
+            <td><b>Gender</b></td>
+            <td><b>Duration</b></td>
           </tr>
-        </thead>
-          
+        </thead>          
         <tbody>
             <tr>                
               <form>
@@ -66,12 +71,12 @@
             </tr> 
             
             <tr ng-repeat="employee in employees">
-                <td>{{employee.name}}</td>
-                <td>{{employee.email}}</td>               
-                <td>{{employee.dob | date:'yyyy-MM-dd'}}</td>
-                <td>{{employee.department}}</td>
-                <td>{{employee.gender}}</td>
-                <td>{{employee.age}}</td>
+                <td align="center">{{employee.name}}</td>
+                <td align="center">{{employee.email}}</td>               
+                <td align="center">{{employee.dob | date:'yyyy-MM-dd'}}</td>
+                <td align="center">{{employee.department}}</td>
+                <td align="center">{{employee.gender}}</td>
+                <td align="center">{{employee.age}}</td>
                 <td>
                   <button class="btn btn-danger btn-sm" ng-click="removeEmployee(employee._id)">Delete</button>&nbsp;&nbsp;
                   <button class="btn btn-primary btn-sm" ng-click="editEmployee(employee._id)">Edit</button>
